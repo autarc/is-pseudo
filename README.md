@@ -26,7 +26,14 @@ if (isPseudo('div a.super:hover')) {
 }
 ```
 
+
+## TODO
+
+- add strict comparison option for selectors with brackets (e.g. `:nth-child(3)`)
+
+
 ## Links
+
 - [https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
 
 

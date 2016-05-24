@@ -1,7 +1,7 @@
 {
   "name": "is-pseudo",
   "description": "Validate if a CSS selector targets a pseudo class or element",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Stefan Dühring | Autarc <autarc@gmail.com>",
   "bugs": {
     "url": "https://github.com/Autarc/is-pseudo/issues"
