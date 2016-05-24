@@ -27,7 +27,7 @@ export default function isPseudo (input, includeCustoms) {
     throw Error('Invalid input type - the selector has to be a string!')
   }
 
-  input = input.replace(/:/g, '')
+  input = input.substr(input.lastIndexOf(':') + 1).replace(/(\(.*\))/g, '')
 
   const selectors = [...defaultSelectors]
 
@@ -35,15 +35,5 @@ export default function isPseudo (input, includeCustoms) {
     selectors.push.apply(selectors, customs)
   }
 
-  return selectors.some((selector) => endsWith(input, selector))
-}
-
-/**
- * Simplified ES2015 'String.prototype.endsWith' replacement.
- *
- * @param  {[type]} searchString [description]
- * @return {[type]}              [description]
- */
-function endsWith (base, suffix) {
-  return base.indexOf(suffix, base.length - suffix.length) !== -1
+  return selectors.some((selector) => input === selector)
 }
