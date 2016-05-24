@@ -22,5 +22,7 @@ export default [
   'file',
   'password',
   'reset',
-  'radio'
+  'radio',
+  'submit',
+  'image'
 ]
