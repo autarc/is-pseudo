@@ -9,31 +9,40 @@ import elements from './elements'
 import vendors from './vendors'
 import customs from './customs'
 
-const defaultSelectors = [
-  ...classes,
-  ...elements,
-  ...vendors
-]
+const defaultConfig = {
+  customs: false,
+  selectors: [
+    ...classes,
+    ...elements,
+    ...vendors
+  ]
+}
 
 /**
- * Lookup to check if the provided input is a valid pseudo element selector.
+ * Lookup to check if the provided input is a (valid) pseudo class or element selector.
  *
- * @param  {string}  selector -
- * @return {boolean}          -
+ * @param  {string}  selector - CSS selector to check
+ * @return {boolean}          - indicator if it selects a pseudo class or element
  */
-export default function isPseudo (input, includeCustoms) {
+export default function lookup (input, customConfig) {
 
   if (typeof input !== 'string') {
     throw Error('Invalid input type - the selector has to be a string!')
   }
 
-  input = input.substr(input.lastIndexOf(':') + 1).replace(/(\(.*\))/g, '')
+  const config = {...defaultConfig}
 
-  const selectors = [...defaultSelectors]
+  if (typeof customConfig === 'object') {
+    Object.assign(config, customConfig)
+  }
 
-  if (includeCustoms) {
+  const { selectors } = config
+
+  if (config.customs) {
     selectors.push.apply(selectors, customs)
   }
 
-  return selectors.some((selector) => input === selector)
+  input = input.substr(input.lastIndexOf(':') + 1)
+
+  return selectors.some((selector) => input.indexOf(selector) === 0)
 }
