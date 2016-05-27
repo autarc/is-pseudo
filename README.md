@@ -19,9 +19,13 @@ Although there are already some projects which refer towards a list of pseudo [c
 ### General
 
 ```js
-import { isPseudo } from 'is-pseudo'
+import isPseudo from 'is-pseudo'
 
 if (isPseudo('div a.super:hover')) {
+  // true
+}
+
+if (isPseudo('div span:has(a)', { customs: true })) {
   // true
 }
 ```

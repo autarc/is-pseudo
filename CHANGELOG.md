@@ -1,3 +1,10 @@
+## [v2.0.0]
+> May 27, 2016
+
+- check for partial integration instead of just the end
+- change `customConfigurations` parmeter
+
+
 ## [v1.2.0]
 > May 24, 2016
 
