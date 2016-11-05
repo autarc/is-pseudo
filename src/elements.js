@@ -6,11 +6,12 @@
 
 export default [
   'after',
+  'backdrop',
   'before',
   'first-letter',
   'first-line',
-  'selection',
-  'backdrop'
+  'selection'
+  // ::alternate
   // ::placeholder
   // ::marker
   // ::spelling-error

@@ -8,21 +8,21 @@
  */
 
 export default [
-  'has',
-  'matches',
-  'contains',
-  'icontains',
-  'input',
-  'selected',
-  'parent',
-  'header',
-  'button',
-  'text',
-  'checkbox',
-  'file',
-  'password',
-  'reset',
-  'radio',
-  'submit',
-  'image'
+	"button",
+	"checkbox",
+	"contains",
+	"file",
+	"has",
+	"header",
+	"icontains",
+	"image",
+	"input",
+	"matches",
+	"parent",
+	"password",
+	"radio",
+	"reset",
+	"selected",
+	"submit",
+	"text"
 ]
