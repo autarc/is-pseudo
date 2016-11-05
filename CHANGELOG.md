@@ -1,3 +1,9 @@
+## [v2.1.0]
+> November 05, 2016
+
+- extend vendor definitions
+
+
 ## [v2.0.0]
 > May 27, 2016
 
